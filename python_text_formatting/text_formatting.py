@@ -1,5 +1,6 @@
 import re
 import sys
+import fileinput
 
 #store indent
 indent = 0
@@ -30,7 +31,6 @@ def main():
     for line in file:
         #check for command
         is_command = get_command(line)
-
 
         #after setting the command go to next line
         if (is_command):
@@ -140,7 +140,7 @@ def on_mode(text):
     line_li = text.split()
 
     for i in line_li:
-        # find current length
+        # find cur  rent length
         curr_char = curr_char + len(i)
 
         #debug
